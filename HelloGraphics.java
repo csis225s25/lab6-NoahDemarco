@@ -31,6 +31,11 @@ class GraphicsPanel extends JPanel {
 
         int stringWidth = FontMetrics.stringWidth(str);
 
+        g.setFont(new Font("Magneto", 1, 12));
+
+        super.setBackground(new Color(155,0,25));
+        super.setForeground(new Color(49,140,231));
+
         g.drawString("Hello, Java Graphics World!", super.getWidth()/2-(stringWidth / 2), super.getHeight()/2);
 
     }
