@@ -1,5 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
 
 /**
  * Lab 6 starter example
@@ -23,7 +25,14 @@ class GraphicsPanel extends JPanel {
         // the Graphics object passed to this method has many methods
         // we can use to draw in the area of the panel, one of which
         // allows us to draw a String at a given x,y position
-        g.drawString("Hello, Java Graphics World!", 0, 20);
+        
+        FontMetrics FontMetrics = g.getFontMetrics();
+        String str = "Hello, Java Graphics World!";
+
+        int stringWidth = FontMetrics.stringWidth(str);
+
+        g.drawString("Hello, Java Graphics World!", super.getWidth()/2-(stringWidth / 2), super.getHeight()/2);
+
     }
 }
 
